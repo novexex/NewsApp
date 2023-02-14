@@ -1,6 +1,6 @@
 //
 //  WebViewController.swift
-//  NewsApp
+//  intro-lab-novexex
 //
 //  Created by Artour Ilyasov on 05.02.2023.
 //

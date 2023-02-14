@@ -60,9 +60,9 @@
 		EB3C7290298ECE5000B52CDF /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				EB3C72AA298ED45A00B52CDF /* Resources */,
 				EB3C72A9298ED42300B52CDF /* Application */,
 				EB3C72A8298ED41D00B52CDF /* API */,
-				EB3C72AA298ED45A00B52CDF /* Resources */,
 				EB3C72A7298ED41400B52CDF /* Views */,
 			);
 			path = NewsApp;
@@ -321,7 +321,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N64BNPUBV4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "intro-lab-novexex/Resources/Info.plist";
+				INFOPLIST_FILE = NewsApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -352,7 +352,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N64BNPUBV4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "intro-lab-novexex/Resources/Info.plist";
+				INFOPLIST_FILE = NewsApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

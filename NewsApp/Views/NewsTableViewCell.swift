@@ -1,6 +1,6 @@
 //
 //  NewsTableViewCell.swift
-//  NewsApp
+//  intro-lab-novexex
 //
 //  Created by Artour Ilyasov on 04.02.2023.
 //

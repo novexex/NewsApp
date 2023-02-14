@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  NewsApp
+//  intro-lab-novexex
 //
 //  Created by Artour Ilyasov on 04.02.2023.
 //
@@ -18,14 +18,8 @@ class MainViewController: UIViewController {
             }
         }
     }
-    private var models = [NewsEntity]() {
-        didSet {
-            for i in models.enumerated() {
-                cache.setObject(i.element, forKey: NSString(string: "\(i.offset)"))
-            }
-        }
-    }
-    private let cache = NSCache<NSString, NewsEntity>()
+    private var models = [NewsEntity]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,17 +29,12 @@ class MainViewController: UIViewController {
     }
     
     private func fetchData() {
-        if let model = cache.object(forKey: NSString(string: "0")) {
-            models.append(model)
-            print("huy")
-        } else {
-            NewsData.shared.getData { [weak self] result in
-                self?.articles = result
-                self?.models = result.compactMap({ NewsEntity(title: $0.title, description: $0.description ?? "", imageURL: URL(string: $0.urlToImage ?? ""), publishedAt: $0.publishedAt, source: $0.source.name, urlToSource: URL(string: $0.url ?? "")) })
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+        NewsData.shared.getData { [weak self] result in
+            self?.articles = result
+            self?.models = result.compactMap({ NewsEntity(title: $0.title, description: $0.description ?? "", imageURL: URL(string: $0.urlToImage ?? ""), publishedAt: $0.publishedAt, source: $0.source.name, urlToSource: URL(string: $0.url ?? "")) })
+        }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     
@@ -94,7 +83,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         vc.data = models[indexPath.row]
         present(navVC, animated: true)
         tableView.reloadData()
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
